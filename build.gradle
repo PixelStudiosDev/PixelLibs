@@ -28,7 +28,7 @@ java {
 }
 
 shadowJar {
-    archiveFileName = 'PixelLibs-' + project.version + '.jar'
+    archiveFileName = 'PixelLibs.jar'
 }
 
 processResources {
