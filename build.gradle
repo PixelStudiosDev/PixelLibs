@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'io.github.goooler.shadow' version '8.1.7' // Java 21 fix
+}
+
+group = 'dev.pixelstudios.pixellibs'
+version = '1.0.0'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.mongodb:mongo-java-driver:3.12.14'
+    implementation 'com.zaxxer:HikariCP:4.0.3'
+
+    implementation 'redis.clients:jedis:5.1.0'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+shadowJar {
+    archiveFileName = 'PixelLibs-' + project.version + '.jar'
+}
+
+processResources {
+    filteringCharset 'UTF-8'
+    expand 'version': project.version
+}
+
+tasks {
+    compileJava {
+        options.encoding = 'UTF-8'
+        dependsOn clean
+    }
+    shadowJar {
+        dependsOn clean
+    }
+}
