@@ -28,35 +28,3 @@ shadowJar {
     exclude 'META-INF/**'
     exclude 'LICENSE'
 }
-
-
-tasks {
-    shadowJar {
-        finalizedBy('copyJar')
-    }
-}
-
-def servers = file('C:/Users/Leo Bernese/Desktop/Guilds Server Test/').listFiles()
-
-tasks.register('copyJar') {
-    doLast {
-        servers.each { file ->
-            if (file.isDirectory()) {
-                var plugins = new File(file.path + '/plugins')
-
-                plugins.listFiles().each { f ->
-                    if (f.name.startsWith('PixelLibs') && f.name.endsWith('.jar')) {
-                        f.delete()
-                    }
-                }
-
-                copy {
-                    from shadowJar.archiveFile
-                    into file.path + '/plugins'
-                }
-            }
-        }
-    }
-
-    outputs.upToDateWhen { false }
-}
