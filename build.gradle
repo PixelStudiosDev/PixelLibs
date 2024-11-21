@@ -5,35 +5,39 @@ plugins {
 }
 
 group = 'dev.pixelstudios.pixellibs'
-version = '1.0.0'
 
-repositories {
-    mavenLocal()
-    mavenCentral()
-}
+subprojects {
+    apply plugin: 'java'
 
-dependencies {
-    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    if (plugins.hasPlugin('java')) {
+        repositories {
+            mavenLocal()
+            mavenCentral()
+        }
 
-    implementation 'org.mongodb:mongo-java-driver:3.12.14'
-    implementation 'com.zaxxer:HikariCP:4.0.3'
+        dependencies {
+            implementation 'org.mongodb:mongo-java-driver:3.12.14'
+            implementation 'com.zaxxer:HikariCP:4.0.3'
 
-    implementation 'redis.clients:jedis:5.1.0'
-    implementation 'com.google.code.findbugs:jsr305:3.0.2'
-}
+            implementation 'redis.clients:jedis:5.1.0'
+            implementation 'com.google.code.findbugs:jsr305:3.0.2'
+        }
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_1_8
-    targetCompatibility = JavaVersion.VERSION_1_8
-}
+        java {
+            sourceCompatibility = JavaVersion.VERSION_1_8
+            targetCompatibility = JavaVersion.VERSION_1_8
+        }
 
-shadowJar {
-    archiveFileName = 'PixelLibs.jar'
-}
+        shadowJar {
+            archiveFileName = 'PixelLibs.jar'
+        }
 
-processResources {
-    filteringCharset 'UTF-8'
-    expand 'version': project.version
+
+        processResources {
+            filteringCharset 'UTF-8'
+            expand 'version': project.version
+        }
+    }
 }
 
 tasks {

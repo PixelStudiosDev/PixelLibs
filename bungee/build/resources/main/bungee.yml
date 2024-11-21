@@ -1,0 +1,5 @@
+name: PixelLibs
+version: 1.1.0
+author: PixelStudios
+main: dev.pixelstudios.pixellibs.bungee.PixelLibs
+description: Set of libraries for PixelStudios plugins

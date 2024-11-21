@@ -1,0 +1,18 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'io.github.goooler.shadow' version '8.1.7' // Java 21 fix
+
+}
+
+group = 'me.leoo.guilds'
+
+
+repositories {
+    maven { url 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url 'https://repo.codemc.org/repository/maven-public/' }
+}
+
+dependencies {
+    compileOnly 'com.velocitypowered:velocity-api:3.2.0-SNAPSHOT'
+}

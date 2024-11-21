@@ -1,0 +1,11 @@
+{
+  "id": "pixellibs-velocity",
+  "name": "PixelLibs-Velocity-Velocity",
+  "version": "1.1.0",
+  "authors": [
+    "PixelStudios"
+  ],
+  "description": "Set of libraries for PixelStudios plugins",
+  "dependencies": [],
+  "main": "dev.pixelstudios.pixellibs.velocity.PixelLibs"
+}

@@ -1,0 +1,4 @@
+rootProject.name = 'PixelLibs'
+include 'bukkit'
+include 'bungee'
+include 'velocity'

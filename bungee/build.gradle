@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+    id 'io.github.goooler.shadow' version '8.1.7' // Java 21 fix
+
+}
+
+group = 'me.leoo.guilds'
+
+repositories {
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+}
+
+dependencies {
+    compileOnly 'net.md-5:bungeecord-api:1.21-R0.1-SNAPSHOT'
+    compileOnly 'net.md-5:bungeecord-api:1.21-R0.1-SNAPSHOT:javadoc'
+}

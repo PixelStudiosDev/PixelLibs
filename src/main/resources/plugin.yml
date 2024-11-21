@@ -1,6 +1,0 @@
-name: PixelLibs
-version: ${version}
-author: PixelStudios
-api-version: "1.13"
-main: dev.pixelstudios.pixellibs.PixelLibs
-description: Set of libraries for PixelStudios plugins
