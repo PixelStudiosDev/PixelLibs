@@ -4,8 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/bukkit/PixelLibs.bukkit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bukkit/PixelLibs.bukkit.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/bungee/PixelLibs.bungee.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bungee/PixelLibs.bungee.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/PixelLibs.main.iml" filepath="$PROJECT_DIR$/.idea/modules/PixelLibs.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/velocity/PixelLibs.velocity.main.iml" filepath="$PROJECT_DIR$/.idea/modules/velocity/PixelLibs.velocity.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bukkit/me.leoo.guilds.PixelLibs.bukkit.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bukkit/me.leoo.guilds.PixelLibs.bukkit.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/bungee/me.leoo.guilds.PixelLibs.bungee.main.iml" filepath="$PROJECT_DIR$/.idea/modules/bungee/me.leoo.guilds.PixelLibs.bungee.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/velocity/me.leoo.guilds.PixelLibs.velocity.main.iml" filepath="$PROJECT_DIR$/.idea/modules/velocity/me.leoo.guilds.PixelLibs.velocity.main.iml" />
     </modules>
   </component>
 </project>
